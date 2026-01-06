@@ -22,6 +22,21 @@
   gap: 0;
 }
 
+.loading-container,
+.error-container {
+  padding: 3rem;
+  text-align: center;
+  color: $textColor;
+  font-size: 18px;
+  background-color: $lightBackground2;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+}
+
+.error-container {
+  color: #ff6b6b;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .projects-heading {

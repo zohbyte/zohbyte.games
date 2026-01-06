@@ -1,0 +1,141 @@
+@import "../../_globalColor";
+
+.team-member-card {
+  background-color: $lightBackground2;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.team-member-card:hover {
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-2px);
+}
+
+.team-member-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.team-member-image-div {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.team-member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.team-member-name {
+  color: $textColor;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.team-member-role {
+  color: $subTitle;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.team-member-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.team-member-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: $textColor;
+  background-color: $lightBackground1;
+  border: 1px solid $lightBorder1;
+}
+
+.team-member-link:hover {
+  background-color: $buttonColor;
+  color: #ffffff;
+  border-color: $buttonColor;
+  transform: translateY(-1px);
+}
+
+.team-member-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.roblox-link {
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+}
+
+.roblox-link span {
+  display: none;
+}
+
+.personal-site-link {
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+}
+
+.personal-site-link span {
+  display: none;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .team-member-name {
+    font-size: 20px;
+  }
+
+  .team-member-role {
+    font-size: 14px;
+  }
+
+  .team-member-link {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+}
+

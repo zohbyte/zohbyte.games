@@ -53,6 +53,17 @@
   border-radius: 4px;
 }
 
+.header li a.apply-button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 .header .logo {
   display: block;
   flex: none;

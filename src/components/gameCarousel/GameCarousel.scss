@@ -1,0 +1,149 @@
+@import "../../_globalColor";
+
+.game-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-image-container {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.carousel-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 20px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+
+.carousel-button-right {
+  right: 10px;
+}
+
+.carousel-thumbnails {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+
+  &.active {
+    border-color: $buttonColor;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-indicator {
+  text-align: center;
+  color: $textColor;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.carousel-empty {
+  text-align: center;
+  color: $textColor;
+  padding: 2rem;
+  opacity: 0.7;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .carousel-image-container {
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .carousel-button-left {
+    left: 5px;
+  }
+
+  .carousel-button-right {
+    right: 5px;
+  }
+
+  .carousel-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+}
+

@@ -9,152 +9,104 @@ import {
   SiRobloxstudio,
   SiRoblox,
   SiPython, 
-  SiJavascript,
-  SiGit,
-  SiVmware
+  SiJavascript
 } from "react-icons/si";
-import { ImTux } from "react-icons/im";
-import { FaMicroscope, FaServer, FaChalkboardTeacher, FaNetworkWired } from "react-icons/fa";
-import { TbFlagFilled } from "react-icons/tb";
 
 // Summary And Greeting Section
 
 const greeting = {
-  username: "zohbyte",
-  title: "Hi, I'm Zoey! \n (she/her)",
+  username: "Zohbyte Games",
+  title: "Welcome to Zohbyte Games",
   subTitle: emoji(
-    "I am a cybersecurity enthusiast and a self-taught game developer. I love working on miscellaneous projects that force me to expand upon my skills. I also participate in the competitive side of cybersecurity, my main focus is Forensics."
+    "An independent Roblox game studio creating immersive and engaging experiences. We specialize in developing high-quality games with scalable systems, AI-driven NPCs, and innovative gameplay mechanics that keep players coming back."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1lk3W_0dvNySIg6VFQ2TBglt0zGEhOyUX/view?usp=sharing", // Set to empty to hide the button
+  resumeLink: "", // Hide resume button for studio site
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/zohbyte",
-  linkedin: "https://www.linkedin.com/in/zohbyte/",
-  gmail: "zoey@zohbyte.dev",
-  discord: "https://discord.com/users/727645538190753863",
-  roblox: "https://www.roblox.com/users/354594269/profile",
-  // gitlab: "https://gitlab.com/saadpasta",
-  // facebook: "https://www.facebook.com/saad.pasta7",
-  // medium: "https://medium.com/@saadpasta",
-  // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
+  gmail: "contact@zohbyte.games",
+  discord: "https://discord.gg/pbfsAJjF5X",
+  roblox: "https://www.roblox.com/groups/4090324/Zohbyte-Games",
   display: true // Set true to display this section, defaults to false
 };
 
 // Skills Section
 
 const skillsSection = {
-  title: "Skills",
-  subTitle: "Cybersecurity • Digital Forensics • Game & Software Development",
+  title: "Our Expertise",
+  subTitle: "Game Development • Roblox Platform • Scalable Systems",
   skills: [
     "Build scalable Roblox/Luau game systems supporting thousands of concurrent players",
-    "Perform digital forensics and incident response including memory, network, and disk analysis",
-    "Develop secure scripts, automation tools, and backend services in Lua + Python",
-    "Create simulated cyber range environments and teach advanced cybersecurity concepts",
-    "Penetration testing, network enumeration, exploitation, and CTF problem solving",
-    "IT troubleshooting, virtualization management, and student technical support"
+    "Create AI-driven NPCs and engaging gameplay mechanics",
+    "Develop optimized game systems with focus on performance and player experience",
+    "Design immersive game worlds with attention to detail and player engagement",
+    "Implement robust backend systems for game progression and data management",
+    "Deploy and maintain live game environments with continuous updates"
   ],
 
   softwareSkills: [
     {skillName: "Lua / Luau", iconComponent: <SiLua />},
+    {skillName: "Roblox Studio", iconComponent: <SiRobloxstudio />},
+    {skillName: "Roblox Platform", iconComponent: <SiRoblox />},
     {skillName: "Python", iconComponent: <SiPython />},
-    {skillName: "JavaScript (basic)", iconComponent: <SiJavascript />},
-    {skillName: "C++ (basic)", iconComponent: <SiCplusplus />},
-    {skillName: "Roblox Development", iconComponent: <SiRobloxstudio />},
-    {skillName: "Digital Forensics", iconComponent: <FaMicroscope />},
-    {
-      skillName: "CTF / Offensive Security",
-      iconComponent: <TbFlagFilled />
-    },
-    {skillName: "Linux", iconComponent: <ImTux />},
-    {skillName: "Wireshark", iconComponent: <FaNetworkWired />},
-    {
-      skillName: "Virtualization (VMware)",
-      iconComponent: <SiVmware />
-    },
-    {
-      skillName: "Git / Version Control",
-      iconComponent: <SiGit />
-    },
-    {
-      skillName: "Teaching & Leadership",
-      iconComponent: <FaChalkboardTeacher />
-    }
+    {skillName: "JavaScript", iconComponent: <SiJavascript />},
+    {skillName: "C++", iconComponent: <SiCplusplus />}
   ],
 
+  display: false
+};
+
+// Team Members Section
+
+const teamMembersSection = {
+  title: "Our Team",
+  subTitle: "Meet the talented developers behind Zohbyte Games",
+  members: [
+    {
+      name: "zohbyte",
+      role: "Owner / Technical Lead",
+      robloxLink: "https://www.roblox.com/users/354594269/profile",
+      personalSite: "https://zohbyte.dev/",
+      image: require("./assets/images/zoey.png")
+    },
+    {
+      name: "Kdove",
+      role: "Community Manager",
+      robloxLink: "https://www.roblox.com/users/7082221643/profile",
+      personalSite: "https://www.kdove.moe/",
+      image: require("./assets/images/kdove.png")
+    },
+    {
+      name: "helicoptercvbe",
+      role: "3D Modeler / Map Designer",
+      robloxLink: "https://www.roblox.com/users/2475651281/profile",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=2475651281&size=150x150&format=Png&isCircular=false"
+    }
+  ],
   display: true
 };
 
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
-  schools: [
-    {
-      schoolName: "University of Maine at Augusta",
-      logo: require("./assets/images/uma.png"),
-      subHeader:
-        "Bachelors of Science in Cybersecurity and Computer Informations Systems",
-      duration: "September 2022 - Present",
-      desc: "Participated in the undergraduate research, taught cybersecurity labs, and ran the CTF team.",
-      descBullets: [
-        "Led a CTF team to 25th in the National Cyber League (School Record)",
-        "Taught Junior / Senior level cybersecurity labs as a Freshman",
-        "Advised Maine Municipalites on cybersecurity and built live-attack demonstrations on virtual replicated infrastructures"
-      ]
-    }
-  ]
+  display: false, // Hide education for studio site
+  schools: []
 };
 
 // Work experience section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: false, //Set it to true to show workExperiences Section
   experience: [
     {
       role: "Technical Lead / Owner",
       company: "Zohbyte Games",
       companylogo: require("./assets/images/zoey.png"),
       date: "July 2025 – Present",
-      desc: "Oversee development across all studio projects while serving as the lead developer. Leverage deep experience with the Roblox platform and proficiency in Luau to create high-quality, scalable & engaging game experiences. Responsible for core system architecture, performance optimization, and deployment of live game environments."
-    },
-    {
-      role: "Tech Hub Navigator",
-      company: "University of Maine at Augusta",
-      companylogo: require("./assets/images/uma.png"),
-      date: "Sep 2025 – Present",
-      desc: "Serve as a friendly and accessible point of contact for students seeking technical support. Provide hands-on assistance with hardware, software, and network issues within a collaborative, student-centered environment."
-    },
-    {
-      role: "Forensics",
-      company: "Squid Proxy Lovers",
-      companylogo: require("./assets/images/spl.png"),
-      date: "Jan 2025 – Present",
-      desc: "I participate in cybersecurity competitions with my team, serving as a forensics specialist. Squid Proxy Lovers is a top 25 team globally on CTFTime.",
-      links: [
-        {text: "spl.team", url: "https://spl.team"},
-        {text: "CTFTime", url: "https://ctftime.org/team/222966"}
-      ]
-    },
-    {
-      role: "Student Researcher & Lab Instructor",
-      company: "Maine Cyber Range",
-      companylogo: require("./assets/images/mcr.png"),
-      date: "Oct 2023 – May 2025",
-      desc: "Taught advanced cybersecurity concepts to undergraduate and graduate students through hands-on labs on a virtual cyber range, facilitating experiential learning in network defense, penetration testing, and digital forensics. Collaborated with student researchers to advise local governments across Maine on strengthening their security posture, and developed real-world simulated scenarios to demonstrate the impact of effective cybersecurity practices."
-    },
-    {
-      role: "Player / Team Captain",
-      company: "Cyber Moose",
-      companylogo: require("./assets/images/cybermooselogo.png"),
-      date: "Sep 2022 – Jan 2025",
-      desc: "Originally joined as a player in the National Cyber League competitions, quickly advancing to team captain due to strong performance and leadership skills. Led the team to achieve a school-record 25th place nationally by coordinating practice sessions, developing strategies, and fostering collaboration among team members."
+      desc: "Founded and lead Zohbyte Games, an independent Roblox game studio. Oversee all development across studio projects while serving as the lead developer. Leverage deep experience with the Roblox platform and proficiency in Luau to create high-quality, scalable & engaging game experiences. Responsible for core system architecture, performance optimization, and deployment of live game environments."
     }
   ]
 };
@@ -164,27 +116,9 @@ const workExperiences = {
 
 const achievementSection = {
   title: emoji("Achievements "),
-  subtitle: "",
+  subtitle: "Notable milestones and accomplishments",
 
   achievementsCards: [
-    {
-      organization: "National Cyber League",
-      achievements: "Forensics 2nd out of 8575",
-      description:
-        "I achieved second place in the Forensics category during the Spring 2025 National Cyber League competition, demonstrating exceptional skills in digital forensics.",
-      image: require("./assets/images/ncl.png"),
-      imageAlt: "National Cyber League Logo",
-      footerLink: []
-    },
-    {
-      organization: "National Cyber League",
-      achievements: "Enumerate & Exploit 2nd out of 7876",
-      description:
-        "I achieved second place in the Enumeration & Exploitation category during the Fall 2025 National Cyber League competition, showcasing strong abilities in identifying and exploiting system vulnerabilities.",
-      image: require("./assets/images/ncl.png"),
-      imageAlt: "National Cyber League Logo",
-      footerLink: []
-    },
     {
       organization: "Squid Games with NPCS",
       achievements: "3+ Million Visits / 45,354 Peak DAU",
@@ -193,75 +127,93 @@ const achievementSection = {
       iconComponent: <SiRobloxstudio />,
       imageAlt: "Roblox Logo",
       footerLink: []
-    },
-    {
-      organization: "US Cyber Games",
-      achievements: "Combine & Pipeline (Season IV & V)",
-      description:
-        "I was selected for both the combine and pipeline programs of the US Cyber Games in Seasons IV & V, highlighting my dedication and skill in the field of cybersecurity.",
-      image: require("./assets/images/uscg.png"),
-      imageAlt: "US Cyber Games Logo",
-      footerLink: []
-    },
-    {
-      organization: "National Cyber League",
-      achievements: "Diamond Rating",
-      description:
-        "Consistently maintained a Diamond I-III ranking in the National Cyber League competitions, showcasing advanced skills in cybersecurity and problem-solving.",
-      image: require("./assets/images/ncl.png"),
-      imageAlt: "National Cyber League Logo",
-      footerLink: []
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
 const resumeSection = {
-  title: "Resume",
-  subtitle: "Feel free to download my resume",
+  title: "About Us",
+  subtitle: "Learn more about Zohbyte Games",
 
   // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
-  title: emoji("Contact Me"),
+  title: emoji("Contact Us"),
   subtitle:
-    "Discord is the best contact method, for professional inquiries use email.",
-  number: "+1 207-631-9722",
-  email_address: "zoey@zohbyte.dev"
+    "Have questions or want to collaborate? Reach out to us!",
+  number: "",
+  email_address: "contact@zohbyte.games"
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 // Roblox Game Section
 const robloxGameSection = {
-  title: "[Alpha] Squid Game with NPCs",
-  subtitle: "My Most Popular Roblox Game",
+  title: "Our Games",
+  subtitle: "Explore our portfolio of Roblox experiences",
   description:
-    "An immersive Roblox experience featuring the classic Squid Game challenges with AI-driven NPCs. Lead development and design for this popular game that has attracted thousands of players.",
-  gameUrl: "https://www.roblox.com/games/101390204205517/Squid-Game-with-NPCs",
-  universeId: 7276011284, // Universe ID for API stats fetching
-  placeId: 101390204205517, // Place ID
-  projects: [
+    "Browse through our collection of games, each crafted with attention to detail and player experience in mind.",
+  games: [
     {
-      title: "[Alpha] Squid Game with NPCs",
-      description:
-        "An immersive Roblox experience featuring the classic Squid Game challenges with AI-driven NPCs. Lead development and design for this popular game that has attracted thousands of players.",
-      thumbnail: require("./assets/images/squidthumbnail.png"),
-      gameUrl:
-        "https://www.roblox.com/games/101390204205517/Squid-Game-with-NPCs"
+      name: "[Alpha] Squid Game with NPCs",
+      placeId: 101390204205517,
+      universeId: 7276011284,
+      gameUrl: "https://www.roblox.com/games/101390204205517/Squid-Game-with-NPCs"
     }
-    // Add more projects here for carousel/multiple games
   ],
   display: true // Set false to hide this section
+};
+
+// Community Contributors Section
+const communityContributorsSection = {
+  title: "Contributors",
+  subTitle: "Thank you to our amazing community contributors",
+  members: [
+    {
+      name: "YaBoiToasterLord",
+      role: "Former Programmer & Asset Developer",
+      robloxLink: "https://www.roblox.com/users/32092732/profile",
+      personalSite: "https://blog.kittycar.online/",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=32092732&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "HanzeroMusic",
+      role: "Former Asset Developer",
+      robloxLink: "https://www.roblox.com/users/69520994/profile",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=69520994&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "Boardbots",
+      role: "Former Programmer & Asset Developer",
+      robloxLink: "https://www.roblox.com/users/65371839/profile",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=65371839&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "MarcoAntonio_Mx",
+      role: "Community Artist",
+      robloxLink: "https://www.roblox.com/users/587626930/profile",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=587626930&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "Missignoh20",
+      role: "Community Artist",
+      robloxLink: "https://www.roblox.com/users/2596925940/profile",
+      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=2596925940&size=150x150&format=Png&isCircular=false"
+    }
+  ],
+  display: true
 };
 
 export {
   greeting,
   socialMediaLinks,
   skillsSection,
+  teamMembersSection,
+  communityContributorsSection,
   educationInfo,
   workExperiences,
   achievementSection,

@@ -9,18 +9,6 @@ export default function socialMedia() {
   }
   return (
     <div className="social-media-div">
-      {socialMediaLinks.discord ? (
-        <a
-          href={socialMediaLinks.discord}
-          className="icon-button discord"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-discord"></i>
-          <span></span>
-        </a>
-      ) : null}
-
       {socialMediaLinks.roblox ? (
         <a
           href={socialMediaLinks.roblox}
@@ -29,6 +17,18 @@ export default function socialMedia() {
           rel="noopener noreferrer"
         >
           <SiRoblox />
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.discord ? (
+        <a
+          href={socialMediaLinks.discord}
+          className="icon-button discord"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-discord"></i>
           <span></span>
         </a>
       ) : null}

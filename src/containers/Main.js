@@ -1,17 +1,18 @@
 import React from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
-import Skills from "./skills/Skills";
+import TeamMembers from "./teamMembers/TeamMembers";
 import WorkExperience from "./workExperience/WorkExperience";
 import Achievement from "./achievement/Achievement";
 import Footer from "../components/footer/Footer";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
-import Profile from "./profile/Profile";
 import Divider from "../components/divider/Divider";
 import RobloxGame from "./robloxGame/RobloxGame";
+import CommunityContributors from "./communityContributors/CommunityContributors";
 import {
-  skillsSection,
+  teamMembersSection,
+  communityContributorsSection,
   educationInfo,
   workExperiences,
   achievementSection,
@@ -27,18 +28,18 @@ const Main = () => {
         <>
           <Header />
           <Greeting />
-          {skillsSection.display && <Divider />}
-          <Skills />
+          {teamMembersSection.display && <Divider />}
+          <TeamMembers />
           {educationInfo.display && <Divider />}
           <Education />
           {workExperiences.display && <Divider />}
           <WorkExperience />
           {robloxGameSection.display && <Divider />}
           <RobloxGame />
+          {communityContributorsSection.display && <Divider />}
+          <CommunityContributors />
           {achievementSection.display && <Divider />}
           <Achievement />
-          <Divider />
-          <Profile />
           <Divider />
           <Footer />
           <ScrollToTopButton />
