@@ -1,93 +1,42 @@
-# zohbyte Portfolio
+# Zohbyte Games Website
 
-A personal portfolio website for Zoey Linardos (zohbyte), based on [developerFolio](https://github.com/saadpasta/developerFolio).
+The official website for Zohbyte Games, a Roblox game development studio. This site showcases our team, games, contributors, and provides an application form for joining our team.
 
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE) file for details.
 
-## Based on developerFolio
+## Attribution
 
-This portfolio is a modified version of [developerFolio](https://github.com/saadpasta/developerFolio) by [Saad Pasta](https://github.com/saadpasta), which is also licensed under GPL-3.0.
+This website is based on [zohbyte.github.io](https://github.com/zohbyte/zohbyte.github.io), which is itself a modified version of [developerFolio](https://github.com/saadpasta/developerFolio) by [Saad Pasta](https://github.com/saadpasta).
 
-**Original Project:** [developerFolio](https://github.com/saadpasta/developerFolio)  
-**Original License:** GNU General Public License v3.0
+**Attribution Chain:**
+- **Original Project:** [developerFolio](https://github.com/saadpasta/developerFolio) by Saad Pasta
+- **Intermediate Base:** [zohbyte.github.io](https://github.com/zohbyte/zohbyte.github.io) by zohbyte
+- **This Project:** [zohbyte.games](https://github.com/zohbyte/zohbyte.games)
 
-## Modifications
+All projects are licensed under GPL-3.0.
 
-This is a modified version of developerFolio. The following comprehensive changes have been made:
+## Features
 
-### Removed Features
-- **Dark Mode**: Completely removed dark mode toggle and theme switching functionality
-- **Blogs Section**: Removed blog posts integration and display
-- **Talks Section**: Removed talks/presentations section
-- **Podcast Section**: Removed podcast integration
-- **Twitter Embed**: Removed Twitter timeline integration
-- **GitHub Integration**: Removed GitHub profile cards and repository cards
-- **Projects Sections**: Removed both Projects and StartupProjects sections
-- **Skill Progress Bars**: Removed animated skill progress indicators
-- **Splash Screen**: Removed animated splash screen on page load
-- **Loading Screen**: Removed loading animation component
-- **Lottie Animations**: Removed all Lottie animation components and assets
-- **Resume PDF**: Removed embedded resume PDF file
+### Core Sections
+- **Team Members**: Showcase of the Zohbyte Games team with roles, Roblox profiles, and personal links
+- **Contributors**: Display of community contributors who have helped with projects
+- **Games**: Interactive game cards with live Roblox statistics, rotating thumbnails, and play buttons
+- **Application Form**: Multi-step application form for various roles:
+  - Developer
+  - Contributor
+  - Community Staff
+  - Quality Assurance
 
-### Added Features
-- **Roblox Game Section**: New custom section for showcasing Roblox game projects with live stats
-- **ScrollReveal Component**: Custom scroll-triggered reveal animations for sections
-- **Divider Component**: Visual dividers between sections
-- **ProjectCard Component**: Custom project card component (different from original Projects)
-- **Custom Domain Support**: Added CNAME file for `zohbyte.games` custom domain
-- **GitHub Actions Workflows**: Added automated deployment and formatting checks
-- **DEPLOYMENT.md**: Added deployment documentation
-
-### Modified Components
-- **Experience Cards**: 
-  - Complete redesign with uniform card layout
-  - Fixed logo and text alignment issues
-  - Fixed text overflow and wrapping problems
-  - Added support for clickable links in experience entries
-  - Improved responsive design
-- **Header**: Simplified navigation, removed dark mode toggle
-- **Greeting Section**: 
-  - Updated with pronouns link
-  - Adjusted button spacing
-  - Removed resume PDF download
-- **Skills Section**: Simplified display, removed progress bars
-- **Social Media**: Enhanced styling and layout
-- **Footer**: Simplified design
-- **Contact Section**: Removed unused imports, simplified layout
-- **Education Cards**: Minor styling improvements
-- **Achievement Cards**: Styling updates
-
-### Structural Changes
-- **Main.js**: Completely restructured - removed dark mode logic, splash screen, and multiple sections
-- **App.js**: Simplified (unchanged but context differs)
-- **Portfolio Data**: Completely personalized with Zoey's information, removed unused sections
-- **Package.json**: 
-  - Changed homepage to `zohbyte.github.io`
-  - Changed name to "Modified developerFolio"
-  - Updated deploy script
-- **Styling**: 
-  - Customized global color scheme in `_globalColor.scss`
-  - Updated all component styles to match new design
-  - Removed dark mode color variables usage
-
-### Technical Changes
-- **GitHub Actions**: 
-  - Updated workflows to use Node.js 20.x
-  - Fixed deployment action configuration
-  - Added Prettier format checking workflow
-- **Deployment**: 
-  - Fixed GitHub Pages deployment configuration
-  - Added proper permissions for workflow
-- **Code Quality**: 
-  - Applied Prettier formatting across all files
-  - Fixed ESLint warnings and errors
-  - Fixed React hooks dependencies
-- **Assets**: 
-  - Replaced all images with personal assets
-  - Removed unused Lottie animation files
-  - Added custom images (zoey.png, project thumbnails, logos)
+### Key Features
+- **Roblox Integration**: Live game statistics and thumbnails fetched from Roblox API via RoProxy
+- **Discord Webhooks**: Application submissions sent directly to Discord channels via webhooks
+- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop
+- **Role-Based Styling**: Dynamic color schemes based on application role
+- **Custom Domain**: Configured for `zohbyte.games` with GitHub Pages
+- **React Router**: Multi-page navigation with proper routing
+- **Modern UI**: Gradient backgrounds, smooth animations, and role-specific color gradients
 
 ## Getting Started
 
@@ -99,10 +48,10 @@ This is a modified version of developerFolio. The following comprehensive change
 
 ```bash
 # Clone the repository
-git clone https://github.com/zohbyte/zohbyte.github.io.git
+git clone https://github.com/zohbyte/zohbyte.games.git
 
 # Navigate to the project directory
-cd zohbyte.github.io
+cd zohbyte-games-website
 
 # Install dependencies
 npm install
@@ -113,6 +62,19 @@ npm start
 
 The site will be available at `http://localhost:3000`.
 
+### Environment Variables
+
+Create a `.env` file in the root directory with your Discord webhook URLs:
+
+```env
+REACT_APP_DISCORD_WEBHOOK_DEVELOPER=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+REACT_APP_DISCORD_WEBHOOK_CONTRIBUTOR=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+REACT_APP_DISCORD_WEBHOOK_COMMUNITY_STAFF=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+REACT_APP_DISCORD_WEBHOOK_QUALITY_ASSURANCE=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
+```
+
+See `env.example` for a template.
+
 ### Building for Production
 
 ```bash
@@ -121,18 +83,53 @@ npm run build
 
 ## Deployment
 
-This portfolio is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `master` branch. The built site is deployed to the `gh-pages` branch.
+This website is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch. The built site is deployed to the `gh-pages` branch.
+
+### GitHub Pages Setup
+
+1. Add Discord webhook URLs as GitHub Secrets:
+   - `REACT_APP_DISCORD_WEBHOOK_DEVELOPER`
+   - `REACT_APP_DISCORD_WEBHOOK_CONTRIBUTOR`
+   - `REACT_APP_DISCORD_WEBHOOK_COMMUNITY_STAFF`
+   - `REACT_APP_DISCORD_WEBHOOK_QUALITY_ASSURANCE`
+
+2. Configure DNS for custom domain:
+   - A records for `zohbyte.games`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - CNAME record for `www.zohbyte.games`: `zohbyte.github.io`
 
 The site is available at:
 - **Custom Domain**: [https://zohbyte.games](https://zohbyte.games)
-- **GitHub Pages**: [https://zohbyte.github.io](https://zohbyte.github.io)
+- **GitHub Pages**: [https://zohbyte.github.io/zohbyte.games](https://zohbyte.github.io/zohbyte.games)
 
-## Technologies Used 
+## Technologies Used
 
-- React
-- SCSS
-- GitHub Pages
-- GitHub Actions
+- **React** 16.10.2 - UI framework
+- **React Router** 5.3.4 - Client-side routing
+- **SCSS** - Styling with Sass
+- **GitHub Pages** - Hosting
+- **GitHub Actions** - CI/CD
+- **RoProxy** - Roblox API proxy for CORS
+- **Discord Webhooks** - Application submissions
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable React components
+│   ├── gameCarousel/    # Game carousel component
+│   ├── gameInfoCard/    # Individual game card
+│   ├── robloxAvatar/    # Roblox avatar display
+│   ├── teamMemberCard/  # Team member card
+│   └── ...
+├── containers/          # Page-level components
+│   ├── application/     # Application form
+│   ├── robloxGame/      # Games section
+│   ├── teamMembers/     # Team section
+│   └── ...
+├── config.js            # Configuration (webhook URLs)
+├── portfolio.js         # Site data (team, games, etc.)
+└── _globalColor.scss    # Global color scheme
+```
 
 ## License Notice
 
@@ -142,5 +139,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 ---
 
-**Modified:** December 2025  
+**Modified:** January 2026  
+**Based on:** [zohbyte.github.io](https://github.com/zohbyte/zohbyte.github.io)  
 **Original Project:** [developerFolio](https://github.com/saadpasta/developerFolio) by Saad Pasta
