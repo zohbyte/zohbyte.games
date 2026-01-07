@@ -77,3 +77,4 @@ export default function GameCarousel({games, onGameSelect, selectedIndex}) {
     </div>
   );
 }
+
