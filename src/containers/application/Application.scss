@@ -11,6 +11,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 100px 20px 60px;
+  box-sizing: border-box;
 }
 
 .application-content {
@@ -19,6 +20,8 @@
   padding: 50px;
   box-shadow: $lightBoxShadowDark 0px 20px 60px -15px;
   border: 1px solid $lightBorder1;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .back-to-roles-button {
@@ -101,7 +104,11 @@
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, $textColor, $textColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   &:hover {
@@ -115,10 +122,19 @@
 
   // Role-specific colors
   &[data-role="developer"] {
+    h3 {
+      background: linear-gradient(135deg, #e098ff, #b873d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     &:hover {
       border-color: #e098ff;
       h3 {
-        color: #e098ff;
+        background: linear-gradient(135deg, #e098ff, #d47aff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       &::before {
         background: #e098ff;
@@ -127,10 +143,19 @@
   }
 
   &[data-role="community-staff"] {
+    h3 {
+      background: linear-gradient(135deg, #c8a2c8, #a882a8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     &:hover {
       border-color: #c8a2c8;
       h3 {
-        color: #c8a2c8;
+        background: linear-gradient(135deg, #c8a2c8, #d4b4d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       &::before {
         background: #c8a2c8;
@@ -139,10 +164,19 @@
   }
 
   &[data-role="quality-assurance"] {
+    h3 {
+      background: linear-gradient(135deg, #f08819, #d6750f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     &:hover {
       border-color: #f08819;
       h3 {
-        color: #f08819;
+        background: linear-gradient(135deg, #f08819, #ffa033);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       &::before {
         background: #f08819;
@@ -151,10 +185,19 @@
   }
 
   &[data-role="contributor"] {
+    h3 {
+      background: linear-gradient(135deg, #e9c604, #d4b004);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     &:hover {
       border-color: #e9c604;
       h3 {
-        color: #e9c604;
+        background: linear-gradient(135deg, #e9c604, #f5d814);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       &::before {
         background: #e9c604;
@@ -187,26 +230,30 @@
   margin-bottom: 30px;
 }
 
-.form-field {
-  margin-bottom: 30px;
+  .form-field {
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
 
-  label {
-    display: block;
-    color: $textColor;
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+    label {
+      display: block;
+      color: $textColor;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      word-wrap: break-word;
 
-    .required {
-      color: #e74c3c;
-      margin-left: 4px;
-      font-weight: 700;
+      .required {
+        color: #e74c3c;
+        margin-left: 4px;
+        font-weight: 700;
+      }
     }
-  }
 
   input[type="text"],
   textarea {
     width: 100%;
+    max-width: 100%;
     padding: 14px 16px;
     border: 2px solid $lightBorder1;
     border-radius: 8px;
@@ -216,6 +263,7 @@
     font-family: inherit;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
 
     &:focus {
       outline: none;
@@ -240,6 +288,8 @@
 .yesno-buttons {
   display: flex;
   gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .yesno-btn {
@@ -366,12 +416,16 @@
 
 @media (max-width: 768px) {
   .application-container {
-    width: 95%;
-    padding: 80px 15px 40px;
+    width: 100%;
+    padding: 80px 10px 40px;
+    box-sizing: border-box;
   }
 
   .application-content {
-    padding: 30px 20px;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
   }
 
   .application-title {
@@ -400,16 +454,30 @@
   .form-navigation {
     flex-direction: column;
     gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .next-button,
   .submit-button {
     margin-left: 0;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .prev-button {
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  .yesno-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .yesno-btn {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .success-icon {
@@ -420,6 +488,32 @@
 
   .success-message {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-container {
+    padding: 60px 8px 30px;
+  }
+
+  .application-content {
+    padding: 20px 12px;
+  }
+
+  .application-title {
+    font-size: 1.75rem;
+  }
+
+  .application-subtitle {
+    font-size: 1rem;
+  }
+
+  .form-field {
+    input[type="text"],
+    textarea {
+      padding: 12px 14px;
+      font-size: 16px; // Prevents zoom on iOS
+    }
   }
 }
 
