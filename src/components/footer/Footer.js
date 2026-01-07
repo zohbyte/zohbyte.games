@@ -18,7 +18,7 @@ export default function Footer() {
           </a>
           {" • "}Modified by{" "}
           <a
-            href="https://github.com/zohbyte/zohbyte.github.io"
+            href="https://github.com/zohbyte"
             target="_blank"
             rel="noreferrer"
             className="footer-link"
