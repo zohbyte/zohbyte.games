@@ -26,6 +26,11 @@ jobs:
           node-version: 20.x
 
       - name: Install and Build 🔧 # Build the Project
+        env:
+          REACT_APP_DISCORD_WEBHOOK_DEVELOPER: ${{ secrets.REACT_APP_DISCORD_WEBHOOK_DEVELOPER }}
+          REACT_APP_DISCORD_WEBHOOK_CONTRIBUTOR: ${{ secrets.REACT_APP_DISCORD_WEBHOOK_CONTRIBUTOR }}
+          REACT_APP_DISCORD_WEBHOOK_COMMUNITY_STAFF: ${{ secrets.REACT_APP_DISCORD_WEBHOOK_COMMUNITY_STAFF }}
+          REACT_APP_DISCORD_WEBHOOK_QUALITY_ASSURANCE: ${{ secrets.REACT_APP_DISCORD_WEBHOOK_QUALITY_ASSURANCE }}
         run: |
           npm install
           npm run build
