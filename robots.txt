@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+
+# Secret admin panel
+User-agent: *
+Disallow: /secret

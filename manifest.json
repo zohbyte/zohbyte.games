@@ -1,0 +1,15 @@
+{
+  "short_name": "Zohbyte Games",
+  "name": "Zohbyte Games - Roblox Game Development Studio",
+  "icons": [
+    {
+      "src": "/zoey.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#65448f",
+  "background_color": "#65448f"
+}
