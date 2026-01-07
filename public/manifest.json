@@ -1,6 +1,6 @@
 {
-  "short_name": "Zoey Linardos",
-  "name": "Zoey Linardos - Cybersecurity & Game Developer Portfolio",
+  "short_name": "Zohbyte Games",
+  "name": "Zohbyte Games - Roblox Game Development Studio",
   "icons": [
     {
       "src": "/zoey.png",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#7851a9",
-  "background_color": "#7851a9"
+  "theme_color": "#65448f",
+  "background_color": "#65448f"
 }

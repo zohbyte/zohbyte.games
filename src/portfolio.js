@@ -63,7 +63,7 @@ const skillsSection = {
 
 const teamMembersSection = {
   title: "Our Team",
-  subTitle: "Meet the talented developers behind Zohbyte Games",
+  subTitle: "Meet the talented team behind Zohbyte Games",
   members: [
     {
       name: "zohbyte",
