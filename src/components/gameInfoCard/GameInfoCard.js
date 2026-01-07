@@ -1,9 +1,9 @@
 import React from "react";
 import "./GameInfoCard.scss";
 import GameThumbnailRotator from "../gameThumbnailRotator/GameThumbnailRotator";
-import { SiRoblox } from "react-icons/si";
+import {SiRoblox} from "react-icons/si";
 
-export default function GameInfoCard({ games }) {
+export default function GameInfoCard({games}) {
   if (!games || games.length === 0) {
     return (
       <div className="game-info-card">
@@ -15,7 +15,7 @@ export default function GameInfoCard({ games }) {
   // For now, just show the first game
   const game = games[0];
 
-  const formatNumber = (num) => {
+  const formatNumber = num => {
     if (num >= 1000000) {
       return (num / 1000000).toFixed(1) + "M";
     } else if (num >= 1000) {
@@ -24,7 +24,7 @@ export default function GameInfoCard({ games }) {
     return num?.toLocaleString() || "0";
   };
 
-  const renderStatValue = (value) => {
+  const renderStatValue = value => {
     if (value === 0) {
       return (
         <div className="stat-loading">
@@ -40,12 +40,12 @@ export default function GameInfoCard({ games }) {
       <div className="game-card-header">
         <h3 className="game-name">{game.name || "Unknown Game"}</h3>
       </div>
-      
+
       <div className="game-card-body">
         <div className="game-thumbnail-section">
           <div className="thumbnail-wrapper">
-            <GameThumbnailRotator 
-              thumbnails={game.thumbnails || []} 
+            <GameThumbnailRotator
+              thumbnails={game.thumbnails || []}
               gameName={game.name}
             />
           </div>
@@ -62,7 +62,9 @@ export default function GameInfoCard({ games }) {
             <div className="game-stat-card">
               <div className="stat-label">Favorites</div>
               <div className="stat-divider"></div>
-              <div className="stat-value">{renderStatValue(game.favorites)}</div>
+              <div className="stat-value">
+                {renderStatValue(game.favorites)}
+              </div>
             </div>
 
             <div className="game-stat-card">
@@ -88,4 +90,3 @@ export default function GameInfoCard({ games }) {
     </div>
   );
 }
-

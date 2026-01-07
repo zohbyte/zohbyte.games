@@ -3,12 +3,12 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import { 
-  SiCplusplus, 
-  SiLua, 
+import {
+  SiCplusplus,
+  SiLua,
   SiRobloxstudio,
   SiRoblox,
-  SiPython, 
+  SiPython,
   SiJavascript
 } from "react-icons/si";
 
@@ -83,7 +83,8 @@ const teamMembersSection = {
       name: "helicoptercvbe",
       role: "3D Modeler / Map Designer",
       robloxLink: "https://www.roblox.com/users/2475651281/profile",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=2475651281&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=2475651281&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true
@@ -143,8 +144,7 @@ const resumeSection = {
 
 const contactInfo = {
   title: emoji("Contact Us"),
-  subtitle:
-    "Have questions or want to collaborate? Reach out to us!",
+  subtitle: "Have questions or want to collaborate? Reach out to us!",
   number: "",
   email_address: "contact@zohbyte.games"
 };
@@ -162,7 +162,8 @@ const robloxGameSection = {
       name: "[Alpha] Squid Game with NPCs",
       placeId: 101390204205517,
       universeId: 7276011284,
-      gameUrl: "https://www.roblox.com/games/101390204205517/Squid-Game-with-NPCs"
+      gameUrl:
+        "https://www.roblox.com/games/101390204205517/Squid-Game-with-NPCs"
     }
   ],
   display: true // Set false to hide this section
@@ -178,31 +179,36 @@ const communityContributorsSection = {
       role: "Former Programmer & Asset Developer",
       robloxLink: "https://www.roblox.com/users/32092732/profile",
       personalSite: "https://blog.kittycar.online/",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=32092732&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=32092732&size=150x150&format=Png&isCircular=false"
     },
     {
       name: "HanzeroMusic",
       role: "Former Asset Developer",
       robloxLink: "https://www.roblox.com/users/69520994/profile",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=69520994&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=69520994&size=150x150&format=Png&isCircular=false"
     },
     {
       name: "Boardbots",
       role: "Former Programmer & Asset Developer",
       robloxLink: "https://www.roblox.com/users/65371839/profile",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=65371839&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=65371839&size=150x150&format=Png&isCircular=false"
     },
     {
       name: "MarcoAntonio_Mx",
       role: "Community Artist",
       robloxLink: "https://www.roblox.com/users/587626930/profile",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=587626930&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=587626930&size=150x150&format=Png&isCircular=false"
     },
     {
       name: "Missignoh20",
       role: "Community Artist",
       robloxLink: "https://www.roblox.com/users/2596925940/profile",
-      image: "https://thumbnails.roblox.com/v1/users/avatar?userIds=2596925940&size=150x150&format=Png&isCircular=false"
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=2596925940&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true

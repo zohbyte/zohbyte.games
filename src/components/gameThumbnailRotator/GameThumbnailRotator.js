@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./GameThumbnailRotator.scss";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
-export default function GameThumbnailRotator({ thumbnails, gameName }) {
+export default function GameThumbnailRotator({thumbnails, gameName}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
   const ROTATION_INTERVAL = 10000; // 10 seconds
@@ -17,7 +17,7 @@ export default function GameThumbnailRotator({ thumbnails, gameName }) {
 
     // Start new interval
     intervalRef.current = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % thumbnails.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % thumbnails.length);
     }, ROTATION_INTERVAL);
   }, [thumbnails]);
 
@@ -32,7 +32,7 @@ export default function GameThumbnailRotator({ thumbnails, gameName }) {
   }, [startRotation]);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex(prevIndex =>
       prevIndex === 0 ? thumbnails.length - 1 : prevIndex - 1
     );
     // Reset rotation timer
@@ -40,9 +40,7 @@ export default function GameThumbnailRotator({ thumbnails, gameName }) {
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
-      (prevIndex + 1) % thumbnails.length
-    );
+    setCurrentIndex(prevIndex => (prevIndex + 1) % thumbnails.length);
     // Reset rotation timer
     startRotation();
   };
@@ -88,4 +86,3 @@ export default function GameThumbnailRotator({ thumbnails, gameName }) {
     </div>
   );
 }
-

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import "./Top.scss";
-import { IoChevronUp } from "react-icons/io5";
+import {IoChevronUp} from "react-icons/io5";
 
 export default function Top() {
   const topButtonRef = useRef(null);
@@ -20,7 +20,7 @@ export default function Top() {
     function scrollFunction() {
       const button = topButtonRef.current;
       if (!button) return;
-      
+
       try {
         if (
           document.body.scrollTop > 20 ||
@@ -32,7 +32,7 @@ export default function Top() {
         }
       } catch (error) {
         // Silently fail if button is removed
-        console.warn('[Top] Error updating button visibility:', error);
+        console.warn("[Top] Error updating button visibility:", error);
       }
     }
 
@@ -54,7 +54,12 @@ export default function Top() {
 
   // When the user clicks on the button, scroll to the top of the document
   return (
-    <button ref={topButtonRef} onClick={TopEvent} id="topButton" title="Go to top">
+    <button
+      ref={topButtonRef}
+      onClick={TopEvent}
+      id="topButton"
+      title="Go to top"
+    >
       <IoChevronUp />
     </button>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProjectCard.scss";
 import Button from "../button/Button";
-import { SiRoblox } from "react-icons/si";
+import {SiRoblox} from "react-icons/si";
 
 export default function ProjectCard({projectInfo}) {
   return (
@@ -48,7 +48,7 @@ export default function ProjectCard({projectInfo}) {
               rel="noopener noreferrer"
               className="project-play-button main-button"
             >
-              <SiRoblox style={{ marginRight: '0.5rem' }} />
+              <SiRoblox style={{marginRight: "0.5rem"}} />
               PLAY
             </a>
           </div>

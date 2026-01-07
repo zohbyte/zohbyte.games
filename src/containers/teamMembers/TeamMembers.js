@@ -1,7 +1,7 @@
 import React from "react";
 import "./TeamMembers.scss";
 import TeamMemberCard from "../../components/teamMemberCard/TeamMemberCard";
-import { teamMembersSection } from "../../portfolio";
+import {teamMembersSection} from "../../portfolio";
 import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 
 export default function TeamMembers() {
@@ -28,4 +28,3 @@ export default function TeamMembers() {
     </ScrollReveal>
   );
 }
-

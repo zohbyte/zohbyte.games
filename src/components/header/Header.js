@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import {useHistory, useLocation} from "react-router-dom";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import {
@@ -22,12 +22,12 @@ function Header() {
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
-    
+
     // Always navigate to home page with the section hash
     if (sectionId === "home") {
       history.push("/");
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({top: 0, behavior: "smooth"});
       }, 100);
     } else {
       // Navigate to /#section (not /apply#section)
@@ -39,13 +39,13 @@ function Header() {
     }
   };
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = sectionId => {
     if (sectionId === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({top: 0, behavior: "smooth"});
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        element.scrollIntoView({behavior: "smooth", block: "start"});
       }
     }
   };
@@ -53,10 +53,10 @@ function Header() {
   return (
     <Headroom>
       <header className="header">
-        <a 
-          href="/" 
+        <a
+          href="/"
           className="logo"
-          onClick={(e) => {
+          onClick={e => {
             if (location.pathname !== "/") {
               e.preventDefault();
               history.push("/");
@@ -75,46 +75,67 @@ function Header() {
         </label>
         <ul className="menu">
           <li>
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick(e, "home")}
-            >
+            <a href="#home" onClick={e => handleNavClick(e, "home")}>
               Home
             </a>
           </li>
           {viewTeamMembers && (
             <li>
-              <a href="#team" onClick={(e) => handleNavClick(e, "team")}>Our Team</a>
+              <a href="#team" onClick={e => handleNavClick(e, "team")}>
+                Our Team
+              </a>
             </li>
           )}
           {viewEducation && (
             <li>
-              <a href="#education" onClick={(e) => handleNavClick(e, "education")}>Education</a>
+              <a
+                href="#education"
+                onClick={e => handleNavClick(e, "education")}
+              >
+                Education
+              </a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience" onClick={(e) => handleNavClick(e, "experience")}>About</a>
+              <a
+                href="#experience"
+                onClick={e => handleNavClick(e, "experience")}
+              >
+                About
+              </a>
             </li>
           )}
           <li>
-            <a href="#projects" onClick={(e) => handleNavClick(e, "projects")}>Games</a>
+            <a href="#projects" onClick={e => handleNavClick(e, "projects")}>
+              Games
+            </a>
           </li>
           {viewContributors && (
             <li>
-              <a href="#contributors" onClick={(e) => handleNavClick(e, "contributors")}>Contributors</a>
+              <a
+                href="#contributors"
+                onClick={e => handleNavClick(e, "contributors")}
+              >
+                Contributors
+              </a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements" onClick={(e) => handleNavClick(e, "achievements")}>Achievements</a>
+              <a
+                href="#achievements"
+                onClick={e => handleNavClick(e, "achievements")}
+              >
+                Achievements
+              </a>
             </li>
           )}
           <li>
-            <a 
-              href="/apply" 
+            <a
+              href="/apply"
               className="apply-button"
-              onClick={(e) => {
+              onClick={e => {
                 if (location.pathname !== "/apply") {
                   e.preventDefault();
                   history.push("/apply");

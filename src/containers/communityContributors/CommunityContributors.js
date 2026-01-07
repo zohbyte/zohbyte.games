@@ -1,7 +1,7 @@
 import React from "react";
 import "./CommunityContributors.scss";
 import TeamMemberCard from "../../components/teamMemberCard/TeamMemberCard";
-import { communityContributorsSection } from "../../portfolio";
+import {communityContributorsSection} from "../../portfolio";
 import ScrollReveal from "../../components/scrollReveal/ScrollReveal";
 
 export default function CommunityContributors() {
@@ -13,7 +13,9 @@ export default function CommunityContributors() {
       <div className="main" id="contributors">
         <div className="community-contributors-main-div">
           <div className="community-contributors-text-div">
-            <h1 className="community-contributors-heading">{communityContributorsSection.title}</h1>
+            <h1 className="community-contributors-heading">
+              {communityContributorsSection.title}
+            </h1>
             <p className="subTitle community-contributors-text-subtitle">
               {communityContributorsSection.subTitle}
             </p>
@@ -28,4 +30,3 @@ export default function CommunityContributors() {
     </ScrollReveal>
   );
 }
-

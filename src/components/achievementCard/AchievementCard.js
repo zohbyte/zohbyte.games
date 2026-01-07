@@ -14,24 +14,28 @@ export default function AchievementCard({cardInfo, isDark}) {
   return (
     <div className="certificate-card">
       {cardInfo.iconComponent ? (
-        <div className="certificate-image-div">
-          {cardInfo.iconComponent}
-        </div>
-      ) : cardInfo.image && (
-        <div className="certificate-image-div">
-          <img
-            src={cardInfo.image}
-            alt={cardInfo.imageAlt || "Card Thumbnail"}
-            className="card-image"
-          ></img>
-        </div>
+        <div className="certificate-image-div">{cardInfo.iconComponent}</div>
+      ) : (
+        cardInfo.image && (
+          <div className="certificate-image-div">
+            <img
+              src={cardInfo.image}
+              alt={cardInfo.imageAlt || "Card Thumbnail"}
+              className="card-image"
+            ></img>
+          </div>
+        )
       )}
       <div className="certificate-detail-div">
-        <h5 className="card-title">{cardInfo.organization || cardInfo.title}</h5>
+        <h5 className="card-title">
+          {cardInfo.organization || cardInfo.title}
+        </h5>
         {cardInfo.achievements && (
           <h5 className="card-achievements">{cardInfo.achievements}</h5>
         )}
-        <p className="card-subtitle">{cardInfo.description || cardInfo.subtitle}</p>
+        <p className="card-subtitle">
+          {cardInfo.description || cardInfo.subtitle}
+        </p>
       </div>
       {cardInfo.footer && cardInfo.footer.length > 0 && (
         <div className="certificate-card-footer">

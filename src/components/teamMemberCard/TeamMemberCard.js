@@ -1,13 +1,19 @@
 import React from "react";
 import "./TeamMemberCard.scss";
-import { SiRoblox } from "react-icons/si";
-import { FaGlobe } from "react-icons/fa";
+import {SiRoblox} from "react-icons/si";
+import {FaGlobe} from "react-icons/fa";
 import RobloxAvatar from "../robloxAvatar/RobloxAvatar";
 
-export default function TeamMemberCard({ member }) {
+export default function TeamMemberCard({member}) {
   // Extract user ID from Roblox link if image is a Roblox API URL
-  const imageValue = typeof member.image === 'string' ? member.image : (member.image?.default || member.image);
-  const isRobloxApiUrl = imageValue && typeof imageValue === 'string' && imageValue.includes("thumbnails.roblox.com");
+  const imageValue =
+    typeof member.image === "string"
+      ? member.image
+      : member.image?.default || member.image;
+  const isRobloxApiUrl =
+    imageValue &&
+    typeof imageValue === "string" &&
+    imageValue.includes("thumbnails.roblox.com");
   const userId = isRobloxApiUrl ? imageValue.match(/userIds=(\d+)/)?.[1] : null;
   const isLocalImage = member.image && !isRobloxApiUrl;
 
@@ -29,11 +35,11 @@ export default function TeamMemberCard({ member }) {
                 className="team-member-image"
               />
             ) : (
-              <div 
-                className="team-member-image" 
-                style={{ 
-                  width: "150px", 
-                  height: "150px", 
+              <div
+                className="team-member-image"
+                style={{
+                  width: "150px",
+                  height: "150px",
                   backgroundColor: "#999",
                   display: "block"
                 }}
@@ -71,4 +77,3 @@ export default function TeamMemberCard({ member }) {
     </div>
   );
 }
-

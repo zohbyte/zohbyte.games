@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./GameCarousel.scss";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
-export default function GameCarousel({ games, onGameSelect, selectedIndex }) {
+export default function GameCarousel({games, onGameSelect, selectedIndex}) {
   const [currentIndex, setCurrentIndex] = useState(selectedIndex || 0);
 
   const handlePrevious = () => {
@@ -17,7 +17,7 @@ export default function GameCarousel({ games, onGameSelect, selectedIndex }) {
     if (onGameSelect) onGameSelect(newIndex);
   };
 
-  const handleThumbnailClick = (index) => {
+  const handleThumbnailClick = index => {
     setCurrentIndex(index);
     if (onGameSelect) onGameSelect(index);
   };
@@ -77,4 +77,3 @@ export default function GameCarousel({ games, onGameSelect, selectedIndex }) {
     </div>
   );
 }
-

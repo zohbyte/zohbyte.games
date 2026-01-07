@@ -1,7 +1,7 @@
 import React from "react";
 import "./SocialMedia.scss";
 import {socialMediaLinks} from "../../portfolio";
-import { SiRoblox } from "react-icons/si";
+import {SiRoblox} from "react-icons/si";
 
 export default function socialMedia() {
   if (!socialMediaLinks.display) {
