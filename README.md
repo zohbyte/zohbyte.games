@@ -36,7 +36,7 @@ This is a modified version of developerFolio. The following comprehensive change
 - **ScrollReveal Component**: Custom scroll-triggered reveal animations for sections
 - **Divider Component**: Visual dividers between sections
 - **ProjectCard Component**: Custom project card component (different from original Projects)
-- **Custom Domain Support**: Added CNAME file for `zohbyte.dev` custom domain
+- **Custom Domain Support**: Added CNAME file for `zohbyte.games` custom domain
 - **GitHub Actions Workflows**: Added automated deployment and formatting checks
 - **DEPLOYMENT.md**: Added deployment documentation
 
@@ -124,7 +124,7 @@ npm run build
 This portfolio is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `master` branch. The built site is deployed to the `gh-pages` branch.
 
 The site is available at:
-- **Custom Domain**: [https://zohbyte.dev](https://zohbyte.dev)
+- **Custom Domain**: [https://zohbyte.games](https://zohbyte.games)
 - **GitHub Pages**: [https://zohbyte.github.io](https://zohbyte.github.io)
 
 ## Technologies Used 
