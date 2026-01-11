@@ -209,6 +209,13 @@ const communityContributorsSection = {
       robloxLink: "https://www.roblox.com/users/2596925940/profile",
       image:
         "https://thumbnails.roblox.com/v1/users/avatar?userIds=2596925940&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "silatel1113",
+      role: "Community Artist",
+      robloxLink: "https://www.roblox.com/users/728276846/profile",
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=728276846&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true
