@@ -85,6 +85,14 @@ const teamMembersSection = {
       robloxLink: "https://www.roblox.com/users/2475651281/profile",
       image:
         "https://thumbnails.roblox.com/v1/users/avatar?userIds=2475651281&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "shokubutsu",
+      role: "2D Clothing",
+      robloxLink: "https://www.roblox.com/users/2301928/profile",
+      personalSite: "https://shokubutsu.carrd.co/",
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=2301928&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true
