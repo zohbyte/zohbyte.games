@@ -67,7 +67,7 @@ const teamMembersSection = {
   members: [
     {
       name: "zohbyte",
-      role: "Owner / Technical Lead",
+      role: "Owner / Lead",
       robloxLink: "https://www.roblox.com/users/354594269/profile",
       personalSite: "https://zohbyte.dev/",
       image: require("./assets/images/zoey.png")
