@@ -93,6 +93,14 @@ const teamMembersSection = {
       personalSite: "https://shokubutsu.carrd.co/",
       image:
         "https://thumbnails.roblox.com/v1/users/avatar?userIds=2301928&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "Wingardxxm",
+      role: "3D Accessories",
+      robloxLink: "https://www.roblox.com/users/21063444/profile",
+      personalSite: "https://www.roblox.com/communities/16709898/Ashes-Wings",
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=21063444&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true
