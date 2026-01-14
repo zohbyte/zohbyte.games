@@ -7,7 +7,7 @@ const ROLES = [
   {id: "developer", name: "Developer"},
   {id: "contributor", name: "Contributor"},
   {id: "community-staff", name: "Moderator"},
-  {id: "quality-assurance", name: "Quality Assurance"}
+  {id: "quality-assurance", name: "Tester"}
 ];
 
 const ROLE_QUESTIONS = {
@@ -211,14 +211,14 @@ const ROLE_QUESTIONS = {
       },
       {
         id: "roblox-qa-exp",
-        label: "Do you have any Quality Assurance experience on Roblox?",
+        label: "Do you have any testing experience on Roblox?",
         type: "yesno",
         required: true
       },
       {
         id: "outside-qa-exp",
         label:
-          "Do you have any Quality Assurance experience outside of Roblox?",
+          "Do you have any testing experience outside of Roblox?",
         type: "yesno",
         required: true
       }
@@ -226,13 +226,13 @@ const ROLE_QUESTIONS = {
     section3: [
       {
         id: "why-join",
-        label: "Why do you want to be a Quality Assurance Tester?",
+        label: "Why do you want to be a Tester?",
         type: "textarea",
         required: true
       },
       {
         id: "qualifications",
-        label: "What makes you qualified to be a Quality Assurance Tester?",
+        label: "What makes you qualified to be a Tester?",
         type: "textarea",
         required: true
       }

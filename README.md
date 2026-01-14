@@ -27,7 +27,7 @@ All projects are licensed under GPL-3.0.
   - Developer
   - Contributor
   - Moderator
-  - Quality Assurance
+  - Tester
 
 ### Key Features
 - **Roblox Integration**: Live game statistics and thumbnails fetched from Roblox API via RoProxy
