@@ -6,7 +6,7 @@ import {DISCORD_WEBHOOKS} from "../../config";
 const ROLES = [
   {id: "developer", name: "Developer"},
   {id: "contributor", name: "Contributor"},
-  {id: "community-staff", name: "Community Staff"},
+  {id: "community-staff", name: "Moderator"},
   {id: "quality-assurance", name: "Quality Assurance"}
 ];
 
@@ -165,13 +165,13 @@ const ROLE_QUESTIONS = {
     section3: [
       {
         id: "why-join",
-        label: "Why do you want to be Community Staff at Zohbyte Games?",
+        label: "Why do you want to be a Moderator at Zohbyte Games?",
         type: "textarea",
         required: true
       },
       {
         id: "qualifications",
-        label: "What makes you qualified to be Community Staff?",
+        label: "What makes you qualified to be a Moderator?",
         type: "textarea",
         required: true
       }
@@ -428,7 +428,7 @@ export default function Application() {
     if (!selectedRole) return "#65448f";
     const colors = {
       developer: "#e098ff",
-      "community-staff": "#c8a2c8",
+      "community-staff": "#c74f51",
       "quality-assurance": "#f08819",
       contributor: "#e9c604"
     };

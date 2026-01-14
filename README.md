@@ -26,7 +26,7 @@ All projects are licensed under GPL-3.0.
 - **Application Form**: Multi-step application form for various roles:
   - Developer
   - Contributor
-  - Community Staff
+  - Moderator
   - Quality Assurance
 
 ### Key Features
