@@ -144,21 +144,21 @@
 
   &[data-role="community-staff"] {
     h3 {
-      background: linear-gradient(135deg, #c8a2c8, #a882a8);
+      background: linear-gradient(135deg, #c74f51, #a63d3d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     &:hover {
-      border-color: #c8a2c8;
+      border-color: #c74f51;
       h3 {
-        background: linear-gradient(135deg, #c8a2c8, #d4b4d4);
+        background: linear-gradient(135deg, #c74f51, #d45f5f);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
       &::before {
-        background: #c8a2c8;
+        background: #c74f51;
       }
     }
   }
