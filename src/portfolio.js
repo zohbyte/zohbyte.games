@@ -3,12 +3,12 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import {
-  SiCplusplus,
-  SiLua,
+import { 
+  SiCplusplus, 
+  SiLua, 
   SiRobloxstudio,
   SiRoblox,
-  SiPython,
+  SiPython, 
   SiJavascript
 } from "react-icons/si";
 
@@ -232,6 +232,14 @@ const communityContributorsSection = {
       robloxLink: "https://www.roblox.com/users/728276846/profile",
       image:
         "https://thumbnails.roblox.com/v1/users/avatar?userIds=728276846&size=150x150&format=Png&isCircular=false"
+    },
+    {
+      name: "2hex",
+      role: "User Interface Designer",
+      robloxLink: "https://www.roblox.com/users/48657656/profile",
+      personalSite: "https://twitter.com/2hex_",
+      image:
+        "https://thumbnails.roblox.com/v1/users/avatar?userIds=48657656&size=150x150&format=Png&isCircular=false"
     }
   ],
   display: true

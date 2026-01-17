@@ -101,7 +101,7 @@ The site is available at:
 - **Custom Domain**: [https://zohbyte.games](https://zohbyte.games)
 - **GitHub Pages**: [https://zohbyte.github.io/zohbyte.games](https://zohbyte.github.io/zohbyte.games)
 
-## Technologies Used
+## Technologies Used 
 
 - **React** 16.10.2 - UI framework
 - **React Router** 5.3.4 - Client-side routing
